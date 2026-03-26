@@ -1,3 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  background-color: gray;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+h2 {
+  font-family: "Neuton", serif;
+  font-weight: bold;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--bs-black);
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  margin: 0 0 0.6rem;
+}
+
+.grid-item {
+  transition: all 0.3s ease-in-out;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.grid-item img {
+  height: auto;
+  object-fit: cover;
+}
+
+.grid-container {
+  transition: all 0.3s ease-in-out;
+  display: grid;
+  grid-auto-columns: 400px;
+  grid-auto-rows: 300px;
+  gap: 1.5rem;
+  grid-template-areas:
+    "box-1 box-2 box-2"
+    "box-1 box-3 box-4"
+    "box-5 box-5 box-6";
+}
+
+@media (max-width: 991px) {
+  .grid-container {
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+      "box-1 box-2 box-2"
+      "box-1 box-3 box-4"
+      "box-5 box-5 box-6";
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-areas:
+      "box-1 box-1"
+      "box-2 box-2"
+      "box-3 box-3"
+      "box-4 box-4"
+      "box-5 box-5"
+      "box-6 box-6";
+  }
 }
