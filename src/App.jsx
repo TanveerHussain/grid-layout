@@ -14,7 +14,7 @@ const App = () => {
         className="grid-item bg-purple-300 flex-column"
         style={{ gridArea: "box-1" }}
       >
-        <h2 className="text-purple-900">Customization</h2>
+        <h2 className="text-purple-900">Customization 123</h2>
         <p className="text-purple-900">
           Customize your experience to fit your needs. Choose themes and layout
           settings in seconds.
